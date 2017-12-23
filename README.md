@@ -1,4 +1,5 @@
-As the name suggests, this repo is my experiment with Angular. 
+As the name suggests, this repo is my experiment with Angular.
+
 For now, I am following @deborahk's course on Pluralsight. 
 
 ## To run:
@@ -6,7 +7,8 @@ For now, I am following @deborahk's course on Pluralsight.
 cd src
 npm start
 ```
-This wil; build the code and start an Express server.
+This will build the code and start an Express server.
+
 Go to localhost:4200 from your browser. 
 
 ## APM
