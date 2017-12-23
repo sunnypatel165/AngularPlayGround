@@ -1,6 +1,6 @@
 As the name suggests, this repo is my experiment with Angular.
 
-For now, I am following @deborahk's course on Pluralsight. 
+For now, I am following Deborah Kurata's course on Pluralsight. 
 
 ## To run:
 ```js
