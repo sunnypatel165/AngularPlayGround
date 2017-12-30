@@ -9,6 +9,7 @@ import { CharToSpacePipe } from './shared/char-to-space.pipe';
 import { ProductDetailComponent } from './products/product-detail.component';
 import { WelcomeComponent } from './home/welcome.component';
 import { RouterModule } from '@angular/router';
+import { ProductGaurdService } from './products/product-gaurd.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,13 +24,15 @@ import { RouterModule } from '@angular/router';
     HttpClientModule,
     RouterModule.forRoot([
       {path: 'products', component:ProductListComponent}, 
-      {path: 'products/:id', component: ProductListComponent},
+      {path: 'products/:id', 
+        canActivate:  [ProductGaurdService], 
+        component: ProductDetailComponent},
       {path:'welcome', component:WelcomeComponent},
       {path:'', redirectTo:'welcome', pathMatch:'full'}, 
       {path:'**', redirectTo:'welcome', pathMatch:'full'}
     ])
   ],
-  providers: [],
+  providers: [ProductGaurdService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
